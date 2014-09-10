@@ -1,0 +1,33 @@
+{
+    "name": "Eric/phptests",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Eric Bittleman",
+            "email": "eric.bittleman@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "dready92/php-on-couch": "dev-master",
+        "predis/predis": "1.0.*",
+        "pda/pheanstalk": "3.0.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "phptests\\": "src/main/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "phptests\\": "src/test"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.2.*"
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit --bootstrap src/test/bootstrap.php -c src/test/config.xml",
+        "run": "php -f src/main/index.php"
+    }
+}
