@@ -1,7 +1,7 @@
 <?php
 namespace phptests\User\Mapper;
 
-use phptests\common\Hydrator\HydratorInterface;
+use phptests\Common\Hydrator\HydratorInterface;
 use phptests\User\UserInterface;
 use phptests\Common\Database\DatabaseAdapterInterface;
 use \Exception;

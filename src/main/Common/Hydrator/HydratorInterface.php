@@ -1,6 +1,6 @@
 <?php
 
-namespace phptests\common\Hydrator;
+namespace phptests\Common\Hydrator;
 
 interface HydratorInterface
 {
