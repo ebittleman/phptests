@@ -4,6 +4,7 @@ namespace phptests\User\Hydrator;
 
 use phptests\common\Hydrator\HydratorInterface;
 use phptests\User\UserInterface;
+use \Exception;
 
 class UserHydrator implements HydratorInterface
 {

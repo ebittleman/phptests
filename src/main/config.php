@@ -2,13 +2,13 @@
 
 return array(
     'couchdb' => array(
-        'dsn' => 'http://127.0.0.1:5984',
-        'db' => 'phptests',
+        'dsn' => getenv('COUCHDB_DSN'),
+        'db' => getenv('COUCHDB_DB'),
     ),
     'pdo' => array(
-        'dsn' => 'mysql:host=localhost;port=3380;dbname=phptests',
-        'username' => 'root',
-        'password' => 'changeme1',
+        'dsn' => getenv('PDO_DSN'),
+        'username' => getenv('PDO_USERNAME'),
+        'password' => getenv('PDO_PASSWORD'),
     ),
     'services' => array(
         'phptests\Common\Database\PdoAdapter' => 'phptests\Common\Factory\Database\PdoAdapterFactory',

@@ -4,6 +4,7 @@ namespace phptests\Common\Factory\Database;
 use phptests\Common\Factory\FactoryInterface;
 use phptests\Common\Di\ServiceLocatorInterface;
 use phptests\Common\Database\PdoAdapter;
+use \Exception;
 
 class PdoAdapterFactory implements FactoryInterface
 {
@@ -13,8 +14,8 @@ class PdoAdapterFactory implements FactoryInterface
 
         if (
             empty($config['pdo']['dsn']) ||
-            empty($config['pdo']['username']) ||
-            empty($config['pdo']['password'])
+            !isset($config['pdo']['username']) ||
+            !isset($config['pdo']['password'])
         ) {
             throw new Exception('Missing Required Settings For PDO');
         }

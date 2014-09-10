@@ -6,6 +6,7 @@ use couchClient;
 use PDO;
 use phptests\Common\Di\ServiceLocator;
 use phptests\Common\Di\ServiceLocatorInterface;
+use \Exception;
 
 class Module
 {
